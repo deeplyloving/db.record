@@ -1,5 +1,5 @@
 # db.record
-通过 record(map)的方式操作表数据
+通过 record(map)的方式操作表数据,似orm非orm,半对像操作
 本类库基于jfinal V1.9 改造
 
 ### maven 使用
@@ -16,7 +16,7 @@
 ##### 1.初始化Db
 ```
 //初始化数据连接
-Db.init("jdbc:mysql://192.168.4.212:3306/test?characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&serverTimezone=GMT%2B8","root", "xxx");
+Db.init("jdbc:mysql://host:port/test?characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&serverTimezone=GMT%2B8","root", "xxx");
 //打印sql日志
 Db.use().setShowSql(true);
 ```
