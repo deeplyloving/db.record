@@ -67,3 +67,23 @@ Db.deleteById("base_basket", "001");
 //Db.update("delete from base_basket");
 ```
 
+##### 5.事务
+```
+Db.tx(new TransactionWrap() {
+		@Override
+		public boolean run() throws SQLException {
+			try {
+				Record r = new Record();
+				r.set("id", "ddddd");
+				Db.save("base_basket", r);
+				
+				r.set("id", "ddddd");
+				r.set("remarks", "remarks");
+				Db.update("base_basket", "id", r);
+			} catch (Exception e) {
+				return false;
+			}
+			return true;
+		}
+	});
+```
