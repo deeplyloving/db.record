@@ -28,7 +28,6 @@ public class AppTest {
 			System.out.println(record.toJson());
 		}
 		Db.deleteById("base_basket", "ddddd");
-		Db.
 		Record r = new Record();
 		r.set("id", "ddddd");
 		Db.save("base_basket", r);
