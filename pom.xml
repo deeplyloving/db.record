@@ -5,16 +5,38 @@
 
 	<groupId>com.liucf</groupId>
 	<artifactId>db.record</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>db.record</name>
 	<url>http://maven.apache.org</url>
+	<description>database curd like orm but not orm</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<developers>
+		<developer>
+			<name>liucf</name>
+			<email>deeplyloving@126.com</email>
+			<url>https://github.com/deeplyloving</url>
+		</developer>
+	</developers>
+	
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+ 
+	<scm>
+		<connection>https://github.com/deeplyloving/db.record</connection>
+		<url>https://github.com/deeplyloving/db.record.git</url>
+		<developerConnection>https://github.com/deeplyloving/</developerConnection>
+	</scm>
+ 
 	<distributionManagement>
 		<snapshotRepository>
 			<id>oss</id>
@@ -72,7 +94,8 @@
 							</execution>
 						</executions>
 					</plugin>
-					<!-- <plugin>
+					<!-- 
+					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.9.1</version>
@@ -84,8 +107,8 @@
 								</goals>
 							</execution>
 						</executions>
-					</plugin> -->
-					<plugin>
+					</plugin>
+					 <plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
 						<executions>
@@ -98,6 +121,7 @@
 							</execution>
 						</executions>
 					</plugin>
+					 -->
 				</plugins>
 			</build>
 		</profile>
