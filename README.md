@@ -7,7 +7,7 @@
 <dependency>
 	<groupId>com.liucf</groupId>
 	<artifactId>db.record</artifactId>
-	<version>*.*.*</version>
+	<version>0.0.3</version>
 </dependency>
 ```
 
