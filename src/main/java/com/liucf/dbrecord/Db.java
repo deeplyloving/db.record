@@ -52,6 +52,14 @@ public class Db {
 		init(DbKit.MAIN_CONFIG_NAME,jdbcDriver,jdbcURL,jdbcUser,jdbcPassword,transactionLevel,dialect,showSql);
 	}
 	
+	public static void initAlias(String configName,String jdbcURL, String jdbcUser, String jdbcPassword) {
+		init(configName,"com.mysql.cj.jdbc.Driver",jdbcURL,jdbcUser,jdbcPassword,null,null,false);
+	}
+	
+	public static void initAlias(String configName,String jdbcDriver, String jdbcURL, String jdbcUser, String jdbcPassword) {
+		init(configName,jdbcDriver,jdbcURL,jdbcUser,jdbcPassword,null,null,false);
+	}
+	
 	static void init(String configName,String jdbcDriver, String jdbcURL, String jdbcUser, String jdbcPassword,Integer transactionLevel,Dialect dialect,Boolean showSql) {
 		DruidDataSource dataSource = new DruidDataSource();
 		dataSource.setUrl(jdbcURL);
@@ -61,7 +69,7 @@ public class Db {
 		dataSource.setInitialSize(5);
 		dataSource.setMinIdle(5);
 		dataSource.setMaxActive(20);
-		init(DbKit.MAIN_CONFIG_NAME,dataSource,transactionLevel,dialect,showSql);
+		init(configName,dataSource,transactionLevel,dialect,showSql);
 	}
 	
 	public static void init(String configName,DataSource dataSource,Integer transactionLevel,Dialect dialect,Boolean showSql) {
