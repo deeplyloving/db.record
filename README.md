@@ -87,3 +87,13 @@ Db.tx(new TransactionWrap() {
 		}
 	});
 ```
+
+##### 6.多数据源
+```
+Db.init("jdbc:mysql://host:port/test?characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&serverTimezone=GMT%2B8","root", "xxx");
+Db.initAlias("toDb","jdbc:mysql://xxx:3306/platform_dress_base?characterEncoding=utf-8&autoReconnect=true&autoReconnectForPools=true&serverTimezone=GMT%2B8","user","password")
+
+//使用 Db.use 切换数据源
+Db.use().find();//默认数据源
+Db.use("toDb").find();//指定数据源
+```
